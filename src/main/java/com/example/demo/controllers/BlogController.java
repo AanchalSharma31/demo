@@ -16,7 +16,7 @@ public class BlogController {
     public List<?> listOfBlog() {
         List<Blog> blogs = new ArrayList<>();
         Blog blog1 = new Blog();
-        blog1.setId(8);
+        blog1.setId(7);
         blog1.setTitle("Ram");
         blog1.setContent("jai ram ji ki");
         blogs.add(blog1);
