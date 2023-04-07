@@ -2,26 +2,19 @@ package com.example.demo.modal;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.context.annotation.Primary;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Date;
 
 @Getter
 @Setter
 @Entity
 @Table
-public class Blog {
-
+public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
-    private String title;
-
+    private Date date;
     private String content;
-
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Comment> comments;
 
 }
