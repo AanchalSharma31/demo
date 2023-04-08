@@ -15,13 +15,13 @@ public class Blog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private int blogId;
 
     private String title;
 
     private String content;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "blog")
     private List<Comment> comments;
 
 }
